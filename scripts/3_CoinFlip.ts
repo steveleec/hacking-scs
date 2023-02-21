@@ -2,8 +2,6 @@ import { ethers, network } from "hardhat";
 import { time, mineUpTo, mine } from "@nomicfoundation/hardhat-network-helpers";
 
 async function main() {
-  const [deployer] = await ethers.getSigners();
-
   const CoinFlip = await ethers.getContractFactory("CoinFlip");
   const coinFlip = await CoinFlip.deploy();
   await coinFlip.deployed();

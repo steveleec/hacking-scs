@@ -1,5 +1,6 @@
 import { HardhatUserConfig } from "hardhat/config";
 import "@nomicfoundation/hardhat-toolbox";
+import "dotenv/config";
 
 const config: HardhatUserConfig = {
   solidity: {
@@ -14,6 +15,15 @@ const config: HardhatUserConfig = {
         version: "0.4.21",
       },
     ],
+  },
+  networks: {
+    mumbai: {
+      url: process.env.MUMBAI_TESNET_URL,
+      accounts: [process.env.ADMIN_ACCOUNT_PRIVATE_KEY || ""],
+      timeout: 0,
+      gas: "auto",
+      gasPrice: "auto",
+    },
   },
 };
 
