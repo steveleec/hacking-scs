@@ -800,3 +800,5 @@ while (counter < blockLimit) {
 ```
 
 In this particular script, notice that the `guess` is submitted only once. From there, the `settle` method is called in a while loop until we make match the values from `guess` and `answer`. At that moment we break the while loop.
+
+## Ethernaut #10 Re-entrancy
